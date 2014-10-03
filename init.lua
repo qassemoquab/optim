@@ -5,6 +5,7 @@ optim = {}
 
 -- optimizations
 torch.include('optim', 'sgd.lua')
+torch.include('optim', 'sgdTable.lua')
 torch.include('optim', 'cg.lua')
 torch.include('optim', 'asgd.lua')
 torch.include('optim', 'fista.lua')
