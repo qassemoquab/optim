@@ -44,6 +44,7 @@ function optim.sgdTable(opfunc, x, config, state)
    numTensors = #x
 
    for index=1,numTensors do 
+      cutorch.setDevice(cutorch.getTensorDevice(x[index]))
       -- (2) weight decay
       if wd ~= 0 then
          dfdx[index]:add(wd, x[index])
